@@ -26,6 +26,7 @@ module PLLabel
   where
 
 import Data.Text
+import PLPrinter
 
 -- | A Label is some textual description of what a Parser expected at a point.
 -- The LabelUse dictates whether the label is intended to be descriptive of the
@@ -58,4 +59,7 @@ data LabelUse
   = Descriptive
   | Enhancing
   deriving Show
+
+instance Document Label where
+  document (Label txt _) = text txt
 

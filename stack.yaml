@@ -1,4 +1,5 @@
 extra-package-dbs: []
 packages:
 - '.'
+- '../PLPrinter'
 resolver: lts-9.18
