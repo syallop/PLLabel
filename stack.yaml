@@ -2,4 +2,7 @@ resolver: lts-13.1
 extra-package-dbs: []
 packages:
 - '.'
-- '../PLPrinter'
+- location:
+    git: https://github.com/syallop/PLPrinter.git
+    commit: 65f4d3805c06fbbe0e4313f17a2129e5fe2187f9
+  extra-dep: true
