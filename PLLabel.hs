@@ -8,12 +8,12 @@ Maintainer  : syallop@gmail.com
 Stability   : experimental
 
 Labels are either `Descriptive`, in which case they fully describe the thing they label,
-or they are `Enhancing`, in which case they enhance but no not replace somethings description.
+or they are `Enhancing`, in which case they enhance but do not replace somethings description.
 
 This library currently only defines this very small type.
 
 TODO:
-  - Label arbitrary types by typeclass/ generics/ other.
+  - Label arbitrary types by typeclass/ generics/ recursion schemes/ other.
   - Export functions for manipulating labels, primarily 'describe' which chains
   - together enhancing labels until the first descriptive label.
 -}
@@ -43,12 +43,15 @@ data Label = Label
   }
   deriving Show
 
+-- | A descriptive label fully describes a thing. Further nested labels can be
+-- ignored.
 descriptiveLabel
   :: Text
   -> Label
 descriptiveLabel
   txt = Label txt Descriptive
 
+-- | An enhancing label adds information to a descriptive label.
 enhancingLabel
   :: Text
   -> Label
