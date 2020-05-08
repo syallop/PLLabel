@@ -41,7 +41,7 @@ data Label = Label
   { _labelText :: Text
   , _labelUse  :: LabelUse
   }
-  deriving Show
+  deriving (Show, Eq, Ord)
 
 -- | A descriptive label fully describes a thing. Further nested labels can be
 -- ignored.
@@ -61,7 +61,7 @@ enhancingLabel
 data LabelUse
   = Descriptive
   | Enhancing
-  deriving Show
+  deriving (Show, Eq, Ord)
 
 instance Document Label where
   document (Label txt _) = text txt
