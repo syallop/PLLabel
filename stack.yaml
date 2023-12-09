@@ -1,7 +1,7 @@
-resolver: lts-17.8
+resolver: lts-21.24
 extra-package-dbs: []
 packages:
 - .
 extra-deps:
 - git: https://github.com/syallop/PLPrinter.git
-  commit: 29c1fc4fe5f33086bed4855e016aa56aa80264af
+  commit: 74fd1a684542f9f876753e2d7b3b0d5609bf385e
